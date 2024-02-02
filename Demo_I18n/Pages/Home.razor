@@ -1,0 +1,16 @@
+﻿@page "/"
+@using Microsoft.Extensions.Localization
+
+<PageTitle>Home</PageTitle>
+
+<h1>@(local["_title"])</h1>
+
+<button>@(app["_okBtn"])</button>
+Welcome to your new app.
+
+@code{
+    [Inject]
+    IStringLocalizer<Home> local{get; set;}
+    [Inject]
+    IStringLocalizer<App> app { get; set; }
+}
